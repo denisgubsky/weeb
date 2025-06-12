@@ -1,0 +1,75 @@
+@use 'helpers' as *;
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-blue-dark);
+  color: var(--color-light);
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+:focus-visible {
+  outline: rem(2) dashed var(--color-light);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+section {
+  padding-block: fluid(80, 44);
+}
+
+.title, .title--smaller {
+  font-weight: 800;
+}
+
+.title {
+  font-size: fluid(72, 38);
+  line-height: 1.1;
+}
+
+.title--smaller {
+  font-size: fluid(56, 36);
+  line-height: 1.1;
+}
+
+.text {
+  font-size: fluid(18, 15);
+  line-height: 1.6;
+}
+
+.label {
+  font-weight: 700;
+  font-size: rem(20);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+

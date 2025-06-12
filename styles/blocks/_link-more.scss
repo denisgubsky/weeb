@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.link-more {
+  font-weight: 500;
+  font-size: fluid(20, 14);
+  letter-spacing: 0.03em;
+
+  span {
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -19px;
+      translate: 0 -50%;
+
+      width: 14px;
+      height: 14px;
+
+      background-image: url(../../images/discover/Vector.svg);
+      background-repeat: no-repeat;
+
+      transition-duration: var(--transition-duration);
+
+    }
+  }
+
+  @include hover {
+    text-decoration: underline;
+    
+    span::after {
+      transform: rotate(-45deg) scale(1);
+    }
+  }
+
+  align-self: flex-start;
+
+  @include mobile {
+    align-self: center;
+  }
+}

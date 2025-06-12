@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.customers {
+  &__inner {
+    @include mobile {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__body {
+    max-width: rem(800);
+
+    
+  }
+
+  &__images {
+    flex: 0 1 auto;
+    min-width: rem(285);
+
+    img {
+      max-width: 100%;
+    }
+
+    @include mobile {
+      min-width: auto;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use '../helpers' as *;
+
+.button {
+  border: rem(2) solid var(--color-purple);
+  background-color: var(--color-purple);
+  border-radius: rem(8);
+  padding: rem(12) rem(28);
+  align-items: center;
+  justify-content: center;
+
+  @include hover {
+    background-color: var(--color-blue-dark);
+    border: rem(2) solid var(--color-light);
+  }
+}
+
+.button-transparent {
+  border: rem(2) solid var(--color-light);
+  background-color: transparent;
+
+  @include hover {
+    border: rem(2) solid var(--color-purple);
+    background-color: var(--color-purple);
+  }
+}

@@ -1,0 +1,15 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #FFFFFF;
+  --color-blue-dark: #0f172a;
+  --color-purple: #9333ea;
+  --color-gray: #94a3b8;
+
+  --font-family-base: "Roboto", sans-serif;
+
+  --container-width: #{rem(1280)};
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.3s;
+}
