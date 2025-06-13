@@ -22,7 +22,7 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    padding-inline: rem(25);
+    padding-right: rem(25);
 
     .explore__link {
       align-self: center;
@@ -48,6 +48,13 @@
 
   &__column {
     flex: 0 1 33.333%;
+
+    @include hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
   }
 
   &__item {
@@ -61,9 +68,11 @@
     &-images {
       position: relative;
       max-width: rem(411);
+      overflow: hidden;
        
       img {
         width: 100%;
+        transition-duration: 0.6s;
       }
 
       span {
@@ -78,7 +87,6 @@
       }
     }
 
-
     &-label {
       font-weight: 500;
     }
@@ -92,7 +100,5 @@
     &-link {
       align-self: flex-start;
     }
-
   }
-  
 }
