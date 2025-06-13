@@ -10,8 +10,6 @@
 
   &__body {
     max-width: rem(800);
-
-    
   }
 
   &__images {
@@ -24,6 +22,29 @@
 
     @include mobile {
       min-width: auto;
+    }
+  }
+
+  &__title {
+
+    span:first-child {
+      color: #c084fc;
+    }
+
+    span:nth-child(2) {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: rem(-10);
+        translate: 0 -50%;
+        width: rem(80);
+        height: rem(80);
+        background-color: #be185d;
+        z-index: -50;
+      }
     }
   }
 }
